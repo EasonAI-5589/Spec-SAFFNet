@@ -1,0 +1,16 @@
+clear;
+load('\\vmware-host\Shared Folders\Documents\Study\Datasets\Labdata\tbb\C-T2DM-90.mat');
+X=pretreat(X,'autoscaling');
+[n,p]=size(X);
+%+++ Sample space
+N=1000;
+SR_sample=nan(N,p);
+for i=1:N
+  [Xcal,ycal,Xtest,ytest]=traintestselect(X,Y,0.7,0);
+  CV=plsldacv(Xcal,ycal,5,5,'autoscaling',0);
+  PLSLDA=plslda(Xcal,ycal,CV.optPC);
+  SR_sample(i,:)=PLSLDA.SR;
+  fprintf('The %dth sampling finished.\n',i);
+end
+
+
