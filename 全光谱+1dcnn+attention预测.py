@@ -27,14 +27,14 @@ early_stopping = EarlyStopping(patience=20, threshold=1, verbose=True)
 
 
 # 设置元素索引
-i = 2
+i = 1
 # 元素名称
 elements = ['Cu', 'Zn', 'Pb', 'V']
 
 # 元素对应超参数字典
 elements_dict = {
     'Cu': {'lr': 0.005, 'num_epochs': 3000, 'hidden_layers': [512, 256, 128]},
-    'Zn': {'lr': 0.004, 'num_epochs': 3000, 'hidden_layers': [512, 256, 128]},
+    'Zn': {'lr': 0.004, 'num_epochs': 800, 'hidden_layers': [512, 256, 128]},
     'Pb': {'lr': 0.005, 'num_epochs': 2500, 'hidden_layers': [512, 256, 128]},
     'V': {'lr': 0.0015, 'num_epochs': 2500, 'hidden_layers': [512, 256, 128]},
 }

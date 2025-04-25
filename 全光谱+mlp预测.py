@@ -21,7 +21,7 @@ from network.mlp import MLP, MLP_3_hidden
 
 
 # 设置元素索引
-i = 2
+i = 1
 # 元素名称
 elements = ['Cu', 'Zn', 'Pb', 'V']
 

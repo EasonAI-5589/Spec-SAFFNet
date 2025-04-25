@@ -1,0 +1,20 @@
+SPEC-SAFFNET/
+├── data/                          # Raw and sample data files
+├── dataset/                       # Dataset loading and formatting functions
+├── functions/                     # Common helper functions
+├── model/                         # MLP, 1D-CNN, SA-1DCNN models
+├── network/                       # Network modules and attention components
+├── output_plot/                   # Output graphs and figures
+├── plot/                          # Visualization utilities
+├── Preprocessing/                 # Data preprocessing scripts (e.g., normalization, truncation)
+├── previous/                      # Archived or previous versions of code
+├── 特征峰数据集/                  # Feature peak dataset (Chinese labeled)
+├── *.ipynb                        # Experiment notebooks for each strategy (PCA, selection, etc.)
+├── *.py                           # Main execution and testing scripts
+│   ├── main.py                    # Entry point for training and evaluation
+│   ├── main_svr.py                # SVR regression
+│   ├── main_elm.py                # ELM regression
+│   ├── test.py                    # Test routine
+│   ├── random_seed.py             # Seed control for reproducibility
+│   ├── training.log               # Training log file
+├── README.md                      # Project overview and instructions
