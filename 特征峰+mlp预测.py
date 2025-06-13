@@ -21,7 +21,7 @@ from network.mlp import MLP
 
 
 # 设置元素索引
-i = 2
+i = 3
 
 # 元素名称
 elements = ['Cu', 'Zn', 'Pb', 'V']
@@ -31,7 +31,7 @@ elements_dict = {
     'Cu': {'lr': 0.001, 'num_epochs': 2000, 'hidden_layers': [32, 16]},
     'Zn': {'lr': 0.001, 'num_epochs': 2000, 'hidden_layers': [32, 16]},
     'Pb': {'lr': 0.002, 'num_epochs': 3000, 'hidden_layers': [32, 16]},
-    'V': {'lr': 0.002, 'num_epochs': 3100, 'hidden_layers': [20, 10]},
+    'V': {'lr': 0.0011, 'num_epochs': 3000, 'hidden_layers': [64, 32]},
 }
 
 # 获取当前元素的超参数
@@ -107,8 +107,8 @@ with torch.no_grad():
 # 加载之前的模型评估结果
 
 # 读取之前的模型评估结果
-model_path = f'./model/特征峰/mlp/best_model_{current_element}.pth'
-results_path = f'./model/特征峰/mlp/best_model_{current_element}.txt'
+model_path = f'./model/tezhengfeng/mlp/best_model_{current_element}.pth'
+results_path = f'./model/tezhengfeng/mlp/best_model_{current_element}.txt'
 
 # 初始化最大R²值
 prev_r2 = -float('inf')
@@ -139,47 +139,6 @@ if r2 > prev_r2:
         f.write(f'R2: {r2:.4f}\n')
 else:
     print(f'Current model R2: {r2:.4f} is not better than previous model R2: {prev_r2:.4f}')
-
-
-
-# # 保存模型评估结果
-# with open(f'./model/mlp/best_model_{current_element}.txt', 'w') as f:
-#     f.write(f'MSE: {mse:.4f}\n')
-#     f.write(f'RMSE: {rmse:.4f}\n')
-#     f.write(f'MRE: {mre:.4f}\n')
-#     f.write(f'R2: {r2:.4f}\n')
-#     f.write(f'Previous model R2: {prev_r2:.4f}\n')
-#     f.write(f'Current model R2: {r2:.4f}\n')
-#     f.write(f'New best model saved with R2: {r2:.4f}\n')
-
-
-# # 比较模型，如果当前模型的 R² 分数更高，则替换之前的模型
-# model_path = f'./model/mlp/best_model_{current_element}.pth'
-# model_path_r2 = f'./model/mlp/best_model_{current_element}_{r2:.4f}.pth'
-# if os.path.exists(model_path):
-#     # 加载之前的模型
-#     previous_model = MLP(feature, hidden[0], hidden[1])
-#     previous_model.load_state_dict(torch.load(model_path,weights_only=True))
-#     previous_model.eval()
-
-#     with torch.no_grad():
-#         for inputs, targets in test_dataloader:
-#             prev_outputs = previous_model(inputs)
-#             prev_targets_np = targets.cpu().numpy()
-#             prev_outputs_np = prev_outputs.cpu().numpy()
-#             prev_r2 = r2_score(prev_targets_np, prev_outputs_np)
-
-#     print(f'Previous model R2: {prev_r2:.4f}')
-# else:
-#     prev_r2 = -float('inf')
-
-# if r2 > prev_r2:
-#     torch.save(model.state_dict(), model_path)
-#     # torch.save(model.state_dict(), model_path_r2)
-#     print(f'New best model saved with R2: {r2:.4f}')
-# else:
-#     print(f'Current model R2: {r2:.4f} is not better than previous model R2: {prev_r2:.4f}')
-
 
 
 

@@ -20,6 +20,7 @@ if __name__ == '__main__':
     data_pb = k_best.fit_transform(full_data, full_pb_label.ravel())
     data_v = k_best.fit_transform(full_data, full_v_label.ravel())
 
+    print(data_cu[:1,:])
 
     ## 数据归一化
     scalar = MinMaxScaler()

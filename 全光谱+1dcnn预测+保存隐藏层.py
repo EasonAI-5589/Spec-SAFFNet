@@ -18,21 +18,21 @@ from functions.evaluation import calculate_rmse, calculate_mre
 from functions.preprocessing import MyDataset
 from functions.save_info import evaluate_and_save_model
 
-from network.onedcnn import Basic1DCNN, CNNWithAttention, EarlyStopping, get_criterion_and_optimizer
+from network.onedcnn import Basic1DCNN,Improved1DCNN, CNNWithAttention, EarlyStopping, get_criterion_and_optimizer
 
 # 设置CUDA设备
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # 设置元素索引
-i = 1
+i = 2
 # 元素名称
 elements = ['Cu', 'Zn', 'Pb', 'V']
 
 # 元素对应超参数字典
 elements_dict = {
-    'Cu': {'lr': 0.002, 'num_epochs': 2000, 'hidden_layers': [512, 256, 128]},
-    'Zn': {'lr': 0.0015, 'num_epochs': 1600, 'hidden_layers': [512, 256, 128]},
-    'Pb': {'lr': 0.001, 'num_epochs': 1500, 'hidden_layers': [512, 256, 128]},
+    'Cu': {'lr': 0.002, 'num_epochs': 2200, 'hidden_layers': [512, 256, 128]},
+    'Zn': {'lr': 0.0014, 'num_epochs': 1600, 'hidden_layers': [512, 256, 128]},
+    'Pb': {'lr': 0.0014, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
     'V': {'lr': 0.0015, 'num_epochs': 1000, 'hidden_layers': [512, 256, 128]},
 }
 
@@ -124,35 +124,6 @@ evaluate_and_save_model(model, current_element, r2, mse, rmse, mre, model_path, 
 
 
 
-# # 初始化最大R²值
-# prev_r2 = -float('inf')
-
-# # 如果存在结果文件，则读取之前的R²
-# if os.path.exists(results_path):
-#     with open(results_path, 'r') as f:
-#         lines = f.readlines()
-#         for line in lines:
-#             if "R2" in line:
-#                 prev_r2 = float(line.strip().split(': ')[1])
-#     print(f'Previous model R2: {prev_r2:.4f}')
-# else:
-#     print(f'No previous evaluation found for {current_element}.')
-
-# # 比较模型，如果当前模型的 R² 分数更高，则替换之前的模型和评估结果
-# if r2 > prev_r2:
-#     # 保存新的模型权重
-#     torch.save(model.state_dict(), model_path)
-#     print(f'New best model saved with R2: {r2:.4f}')
-    
-#     # 保存新的评估结果
-#     with open(results_path, 'w') as f:
-#         f.write(f'{elements[i]}\n')
-#         f.write(f'MSE: {mse:.4f}\n')
-#         f.write(f'RMSE: {rmse:.4f}\n')
-#         f.write(f'MRE: {mre:.4f}\n')
-#         f.write(f'R2: {r2:.4f}\n')
-# else:
-#     print(f'Current model R2: {r2:.4f} is not better than previous model R2: {prev_r2:.4f}')
 
 
 

@@ -33,10 +33,10 @@ elements = ['Cu', 'Zn', 'Pb', 'V']
 
 # 元素对应超参数字典
 elements_dict = {
-    'Cu': {'lr': 0.005, 'num_epochs': 3000, 'hidden_layers': [512, 256, 128]},
-    'Zn': {'lr': 0.004, 'num_epochs': 800, 'hidden_layers': [512, 256, 128]},
-    'Pb': {'lr': 0.005, 'num_epochs': 2500, 'hidden_layers': [512, 256, 128]},
-    'V': {'lr': 0.0015, 'num_epochs': 2500, 'hidden_layers': [512, 256, 128]},
+    'Cu': {'lr': 0.002, 'num_epochs': 2200, 'hidden_layers': [512, 256, 128]},
+    'Zn': {'lr': 0.0008, 'num_epochs': 1400, 'hidden_layers': [512, 256, 128]},
+    'Pb': {'lr': 0.0014, 'num_epochs': 1400, 'hidden_layers': [512, 256, 128]},
+    'V': {'lr': 0.0013, 'num_epochs': 1300, 'hidden_layers': [512, 256, 128]},
 }
 
 # 获取当前元素的超参数as
@@ -67,112 +67,110 @@ train_dataloader = DataLoader(train_Dataset, batch_size=57, shuffle=True)
 test_dataloader = DataLoader(test_Dataset, batch_size=57, shuffle=True)
 
 
-# 初始化模型和损失函数
-# 模型选择
-model_type = 'attention'  # 或 'basic'
-if model_type == 'basic':
-    model = Basic1DCNN()
-else:
-    model = CNNWithAttention()
+# 定义模型保存路径和结果保存路径
+model_path = f'./model/quanguangpu/1dcnnattention/best_model_{current_element}.pth'
+results_path = f'./model/quanguangpu/1dcnnattention/best_model_{current_element}.txt'
 
-# 损失函数和优化器
-criterion, optimizer = get_criterion_and_optimizer(model, lr=lr)
-
-# 将模型移动到GPU
-model.to(device)
-
-# 打印模型结构
-print(model)
-
-
-# 训练模型
-
-model.train()   # 将模型设置为训练模式
-
-for epoch in range(num_epochs):
-    for inputs, targets in train_dataloader:
-        # reshape inputs from (45,800) to (45,1,800)
-        inputs = inputs.unsqueeze(1).to(device)
-        targets = targets.to(device)   
-
-        optimizer.zero_grad() #inputs
-        outputs = model(inputs)
-        loss = criterion(outputs, targets)
-        loss.backward()
-        optimizer.step()
-    # 计算    
-    early_stopping(loss)
-    if early_stopping.early_stop:
-        print(f'Early stopping triggered at epoch {epoch+1}')
-        break
-    if (epoch + 1) % 100 == 0:
-        print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4f}')
-
-
-# 验证模型
-model.eval()    # 将模型设置为验证模式
-
-
-with torch.no_grad():
-    for inputs, targets in test_dataloader:
-        inputs = inputs.unsqueeze(1).to(device)     
-        targets = targets.to(device)
-
-        outputs = model(inputs)
-
-        # 将张量转换为 NumPy 数组
-        targets_np = targets.cpu().numpy()
-        outputs_np = outputs.cpu().numpy()
-        
-        mse = mean_squared_error(targets_np, outputs_np)
-        rmse = calculate_rmse(targets_np, outputs_np)
-        mre = calculate_mre(targets_np, outputs_np)
-        r2 = r2_score(targets_np, outputs_np)
-
-        print(elements[i])    
-        print(f'MSE: {mse:.4f}, RMSE: {rmse:.4f}, MRE: {mre:.4f}, R2: {r2:.4f}')
-
-
-
-# 读取之前的模型评估结果
-model_path = f'./model/quanguangpu/onedcnnattention/best_model_{current_element}.pth'
-results_path = f'./model/quanguangpu/onedcnnattention/best_model_{current_element}.txt'
-
-
-# 初始化最大R²值
-prev_r2 = -float('inf')
-
-# 如果存在结果文件，则读取之前的R²
+# 初始化之前的最佳R2
 if os.path.exists(results_path):
     with open(results_path, 'r') as f:
         lines = f.readlines()
+        prev_r2 = -float('inf')  # 默认值
         for line in lines:
             if "R2" in line:
                 prev_r2 = float(line.strip().split(': ')[1])
     print(f'Previous model R2: {prev_r2:.4f}')
 else:
+    prev_r2 = -float('inf')
     print(f'No previous evaluation found for {current_element}.')
 
-# 比较模型，如果当前模型的 R² 分数更高，则替换之前的模型和评估结果
-if r2 > prev_r2:
-    # 保存新的模型权重
-    torch.save(model.state_dict(), model_path)
-    print(f'New best model saved with R2: {r2:.4f}')
-    
-    # 保存新的评估结果
-    with open(results_path, 'w') as f:
-        f.write(f'{elements[i]}\n')
-        f.write(f'MSE: {mse:.4f}\n')
-        f.write(f'RMSE: {rmse:.4f}\n')
-        f.write(f'MRE: {mre:.4f}\n')
-        f.write(f'R2: {r2:.4f}\n')
-else:
-    print(f'Current model R2: {r2:.4f} is not better than previous model R2: {prev_r2:.4f}')
+# 定义最大尝试次数以防止无限循环
+max_attempts = 10
+attempt = 0
+
+while attempt < max_attempts:
+    attempt += 1
+    print(f'\n=== Training Attempt {attempt} for Element: {current_element} ===')
+
+    # 初始化模型和损失函数
+    model = CNNWithAttention()
+    criterion = nn.MSELoss()
+    optimizer = optim.Adam(model.parameters(), lr=lr)
+
+    # 将模型移动到GPU
+    model.to(device)
+
+    # 记录训练过程中的最佳R2
+    best_r2 = prev_r2
+
+    # 训练模型
+
+    model.train()   # 将模型设置为训练模式
+
+    for epoch in range(num_epochs):
+        for inputs, targets in train_dataloader:
+            inputs = inputs.unsqueeze(1).to(device)     
+            targets = targets.to(device)
+            optimizer.zero_grad()
+            outputs = model(inputs)
+            loss = criterion(outputs, targets)
+            loss.backward()
+            optimizer.step()
+
+        if (epoch + 1) % 100 == 0:
+            print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4f}')
+
+
+    # 验证模型
+    model.eval()    # 将模型设置为验证模式
+
+
+    with torch.no_grad():
+        for inputs, targets in test_dataloader:
+            inputs = inputs.unsqueeze(1).to(device)
+            targets = targets.to(device)   
+
+            outputs = model(inputs)
+
+            # 将张量转换为 NumPy 数组
+            targets_np = targets.cpu().numpy()
+            outputs_np = outputs.cpu().numpy()
+            
+            # 计算评估指标
+            mse = mean_squared_error(targets_np, outputs_np)
+            rmse = calculate_rmse(targets_np, outputs_np)
+            mre = calculate_mre(targets_np, outputs_np)
+            r2 = r2_score(targets_np, outputs_np)
+
+            print(elements[i])    
+            print(f'MSE: {mse:.4f}, RMSE: {rmse:.4f}, MRE: {mre:.4f}, R2: {r2:.4f}')
 
 
 
+    print(f'\nValidation Metrics for {current_element}:')
+    print(f'MSE: {mse:.4f}, RMSE: {rmse:.4f}, MRE: {mre:.4f}, R2: {r2:.4f}')
 
+    # 如果当前的R2超过之前的最佳R2，则保存模型并退出训练循环
+    if r2 > prev_r2:
+        print(f'\nR2 improved from {prev_r2:.4f} to {r2:.4f}. Saving model and stopping training.')
+        torch.save(model.state_dict(), model_path)
+        with open(results_path, 'w') as f:
+            f.write(f'{current_element}\n')
+            f.write(f'MSE: {mse:.4f}\n')
+            f.write(f'RMSE: {rmse:.4f}\n')
+            f.write(f'MRE: {mre:.4f}\n')
+            f.write(f'R2: {r2:.4f}\n')
+        break  # 退出训练循环
+    else:
+        print(f'\nCurrent model R2: {r2:.4f} is not better than previous model R2: {prev_r2:.4f}. Retrying...')
 
+# 如果达到最大尝试次数且没有改进
+if attempt >= max_attempts and r2 <= prev_r2:
+
+    print(f'\nMaximum attempts ({max_attempts}) reached. No improvement in R2.')
+
+# 打印模型
+# print(model)
 
 
 

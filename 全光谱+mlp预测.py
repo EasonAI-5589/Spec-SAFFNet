@@ -21,7 +21,7 @@ from network.mlp import MLP, MLP_3_hidden
 
 
 # 设置元素索引
-i = 1
+i = 0
 # 元素名称
 elements = ['Cu', 'Zn', 'Pb', 'V']
 
@@ -29,8 +29,8 @@ elements = ['Cu', 'Zn', 'Pb', 'V']
 elements_dict = {
     'Cu': {'model': 'MLP_3_hidden','lr': 0.002, 'num_epochs': 2000, 'hidden_layers': [512, 256, 128]},
     'Zn': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
-    'Pb': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
-    'V': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 2500, 'hidden_layers': [512, 256, 128]},
+    'Pb': {'model': 'MLP_3_hidden','lr': 0.0018, 'num_epochs': 1200, 'hidden_layers': [512, 256, 128]},
+    'V': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
 }
 
 # 获取当前元素的超参数as
@@ -145,7 +145,8 @@ else:
     print(f'Current model R2: {r2:.4f} is not better than previous model R2: {prev_r2:.4f}')
 
 
-
+# 打印模型
+print(model)
 
 
 

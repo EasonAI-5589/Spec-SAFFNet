@@ -18,7 +18,7 @@ from network.mlp import MLP, MLP_3_hidden
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # 设置元素索引
-i = 3
+i = 2
 # 元素名称
 elements = ['Cu', 'Zn', 'Pb', 'V']
 
@@ -26,7 +26,7 @@ elements = ['Cu', 'Zn', 'Pb', 'V']
 elements_dict = {
     'Cu': {'model': 'MLP_3_hidden','lr': 0.0013, 'num_epochs': 1500, 'hidden_layers': [512, 256, 128]},
     'Zn': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
-    'Pb': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
+    'Pb': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 2200, 'hidden_layers': [64, 32, 16]},
     'V': {'model': 'MLP_3_hidden','lr': 0.0008, 'num_epochs': 550, 'hidden_layers': [512, 256, 128]},
 }
 
@@ -123,7 +123,7 @@ results_path = f'./model/quanguangpu/feature_decomposition/best_model_{current_e
 evaluate_and_save_model(model, current_element, r2, mse, rmse, mre, model_path, results_path)
 
 
-
+print(model)
 
 
 

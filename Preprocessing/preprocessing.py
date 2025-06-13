@@ -163,7 +163,7 @@ if __name__ == '__main__':
 
 
     # 特征峰数据标准化
-    scalar = StandardScaler()
+    scalar = MinMaxScaler()
     cu_data = scalar.fit_transform(cu_data)
     zn_data = scalar.fit_transform(zn_data)
     pb_data = scalar.fit_transform(pb_data)
@@ -191,20 +191,6 @@ if __name__ == '__main__':
     # print("-------------------")
     # print(pb_label_test)
     # print("-------------------")
-
-    # # 创建数据集
-    # Cu_train_Dataset = MyDataset(cu_data_train, cu_label_train)
-    # Cu_test_Dataset = MyDataset(cu_data_test, cu_label_test)
-
-    # Zn_train_Dataset = MyDataset(zn_data_train, zn_label_train)
-    # Zn_test_Dataset = MyDataset(zn_data_test, zn_label_test)
-
-    # Pb_train_Dataset = MyDataset(pb_data_train, pb_label_train)
-    # Pb_test_Dataset = MyDataset(pb_data_test, pb_label_test)
-
-    # V_train_Dataset = MyDataset(v_data_train, v_label_train)
-    # V_test_Dataset = MyDataset(v_data_test, v_label_test)
-
 
 
     # 如果dataset/特征峰 文件夹为空则，保存数据集,如果不为空，替换掉原有数据集

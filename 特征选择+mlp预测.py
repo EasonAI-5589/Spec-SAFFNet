@@ -18,7 +18,7 @@ from network.mlp import MLP, MLP_3_hidden
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # 设置元素索引
-i = 0
+i = 2
 # 元素名称
 elements = ['Cu', 'Zn', 'Pb', 'V']
 
@@ -27,7 +27,7 @@ elements_dict = {
     'Cu': {'model': 'MLP_3_hidden','lr': 0.002, 'num_epochs': 2000, 'hidden_layers': [512, 256, 128]},
     'Zn': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
     'Pb': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
-    'V': {'model': 'MLP_3_hidden','lr': 0.0015, 'num_epochs': 1800, 'hidden_layers': [512, 256, 128]},
+    'V': {'model': 'MLP_3_hidden','lr': 0.0005, 'num_epochs': 2100, 'hidden_layers': [32, 16, 4]},
 }
 
 
@@ -121,36 +121,8 @@ results_path = f'./model/quanguangpu/feature_selection/best_model_{current_eleme
 
 evaluate_and_save_model(model, current_element, r2, mse, rmse, mre, model_path, results_path)
 
+print(model)
 
-# # 初始化最大R²值
-# prev_r2 = -float('inf')
-
-# # 如果存在结果文件，则读取之前的R²
-# if os.path.exists(results_path):
-#     with open(results_path, 'r') as f:
-#         lines = f.readlines()
-#         for line in lines:
-#             if "R2" in line:
-#                 prev_r2 = float(line.strip().split(': ')[1])
-#     print(f'Previous model R2: {prev_r2:.4f}')
-# else:
-#     print(f'No previous evaluation found for {current_element}.')
-
-# # 比较模型，如果当前模型的 R² 分数更高，则替换之前的模型和评估结果
-# if r2 > prev_r2:
-#     # 保存新的模型权重
-#     torch.save(model.state_dict(), model_path)
-#     print(f'New best model saved with R2: {r2:.4f}')
-    
-#     # 保存新的评估结果
-#     with open(results_path, 'w') as f:
-#         f.write(f'{elements[i]}\n')
-#         f.write(f'MSE: {mse:.4f}\n')
-#         f.write(f'RMSE: {rmse:.4f}\n')
-#         f.write(f'MRE: {mre:.4f}\n')
-#         f.write(f'R2: {r2:.4f}\n')
-# else:
-#     print(f'Current model R2: {r2:.4f} is not better than previous model R2: {prev_r2:.4f}')
 
 
 

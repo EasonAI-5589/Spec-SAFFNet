@@ -5,11 +5,108 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81c77e5b-b516-47c2-9ded-a620d5764a36" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/XRF.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/XRF.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/Fitting Curve.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/Regression Line.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualization_SpecSAFFNet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/structure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/structure.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comparison Experiment/CARS-ELM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comparison Experiment/RF.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comparison Experiment/SVR.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Preprocessing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Preprocessing/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Preprocessing/feature_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Preprocessing/feature_selection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Preprocessing/load.py" beforeDir="false" afterPath="$PROJECT_DIR$/Preprocessing/load.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Preprocessing/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Preprocessing/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/特征峰/Cu_test_data.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/特征峰/Cu_test_data.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/特征峰/Cu_train_data.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/特征峰/Cu_train_data.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/特征峰/Pb_test_data.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/特征峰/Pb_test_data.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/特征峰/Pb_train_data.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/特征峰/Pb_train_data.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/特征峰/V_test_data.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/特征峰/V_test_data.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/特征峰/V_train_data.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/特征峰/V_train_data.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/特征峰/Zn_test_data.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/特征峰/Zn_test_data.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/特征峰/Zn_train_data.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/特征峰/Zn_train_data.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/evaluation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/preprocessing_co.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/preprocessing_co.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/save_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/save_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_elm.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_elm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_svr.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_svr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Cu.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Cu.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Cu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Cu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Pb.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Pb.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Pb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Pb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_V.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_V.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_V.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_V.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Zn.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Zn.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Zn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/1dcnn/best_model_Zn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_Cu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_Cu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_Pb.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_Pb.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_Pb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_Pb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_V.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_V.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_Zn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_decomposition/best_model_Zn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Cu.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Cu.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Cu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Cu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Pb.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Pb.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Pb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Pb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_V.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_V.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_V.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_V.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Zn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/feature_selection/best_model_Zn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/mlp/best_model_Pb.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/mlp/best_model_Pb.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/mlp/best_model_Pb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/mlp/best_model_Pb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/mlp/best_model_V.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/mlp/best_model_V.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/mlp/best_model_V.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/quanguangpu/mlp/best_model_V.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/onedcnnattention/best_model_Cu.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/onedcnnattention/best_model_Cu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/onedcnnattention/best_model_Pb.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/onedcnnattention/best_model_Pb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/onedcnnattention/best_model_V.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/onedcnnattention/best_model_V.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/onedcnnattention/best_model_Zn.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quanguangpu/onedcnnattention/best_model_Zn.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/elm/best_model_Cu.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/elm/best_model_Pb.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/elm/best_model_V.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/elm/best_model_Zn.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_Cu.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_Cu.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_Cu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_Cu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_Pb.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_Pb.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_Pb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_Pb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_V.pth" beforeDir="false" afterPath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_V.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_V.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/tezhengfeng/mlp/best_model_V.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/elm.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/elm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/mlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/onedcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/onedcnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/onedcnnwithattention.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/onedcnnwithattention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/.idea/XRF光谱含量预测.iml" beforeDir="false" afterPath="$PROJECT_DIR$/previous/.idea/XRF光谱含量预测.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/previous/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/previous/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/previous/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/previous/.idea/sshConfigs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/previous/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/previous/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/previous/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/CIP2pred.m" beforeDir="false" afterPath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/CIP2pred.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/carspls.m" beforeDir="false" afterPath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/carspls.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/classplot2.m" beforeDir="false" afterPath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/classplot2.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/compute_T2DM_data.asv" beforeDir="false" afterPath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/compute_T2DM_data.asv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/csvd.m" beforeDir="false" afterPath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/csvd.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/databin.m" beforeDir="false" afterPath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/databin.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/dosc.M" beforeDir="false" afterPath="$PROJECT_DIR$/previous/PCA降维项目/CARS/CARS/dosc.M" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/random_seed.py" beforeDir="false" afterPath="$PROJECT_DIR$/random_seed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/structure.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/全光谱+1dcnn+attention预测.py" beforeDir="false" afterPath="$PROJECT_DIR$/全光谱+1dcnn+attention预测.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/全光谱+1dcnn+attention预测witho1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/全光谱+1dcnn预测+保存隐藏层.py" beforeDir="false" afterPath="$PROJECT_DIR$/全光谱+1dcnn预测+保存隐藏层.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/全光谱+mlp预测.py" beforeDir="false" afterPath="$PROJECT_DIR$/全光谱+mlp预测.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/全光谱+pca+mlp预测.py" beforeDir="false" afterPath="$PROJECT_DIR$/全光谱+pca+mlp预测.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/全光谱+pca+特征选择+mlp预测.py" beforeDir="false" afterPath="$PROJECT_DIR$/全光谱+pca+特征选择+mlp预测.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/全光谱+特征选择+mlp预测.py" beforeDir="false" afterPath="$PROJECT_DIR$/全光谱+特征选择+mlp预测.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/特征峰+mlp预测.py" beforeDir="false" afterPath="$PROJECT_DIR$/特征峰+mlp预测.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/特征选择+mlp预测.py" beforeDir="false" afterPath="$PROJECT_DIR$/特征选择+mlp预测.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/特征降维+mlp预测.py" beforeDir="false" afterPath="$PROJECT_DIR$/特征降维+mlp预测.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +123,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "EasonAI-5589"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EasonAI-5589&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/EasonAI-5589/Spec-SAFFNet.git",
-    "accountId": "3c1138e1-5847-401d-9be5-e0422a4b8d77"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EasonAI-5589/Spec-SAFFNet.git&quot;,
+    &quot;accountId&quot;: &quot;3c1138e1-5847-401d-9be5-e0422a4b8d77&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -52,15 +149,21 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Fitting Curve.executor": "Run",
+    "Python.Regression Line.executor": "Run",
+    "Python.visualization.executor": "Run",
+    "Python.visualization_SpecSAFFNet.executor": "Run",
     "Python.全光谱+1dcnn+attention预测.executor": "Run",
     "Python.全光谱+1dcnn+attention预测witho1.executor": "Run",
+    "Python.融合光谱+1dcnn+attention预测 .executor": "Run",
+    "Python.融合光谱+1dcnn+attention预测.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/Users/guoyichen/EasonAI/Spec-SAFFNet",
+    "last_opened_file_path": "/Users/guoyichen/EasonAI/Spec-SAFFNet/Visualization",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,14 +175,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Visualization" />
       <recent name="C:\Users\86187\WPSDrive\1237965421\WPS云盘\XRF论文\XRF实验\XRF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PY-251.26094.141" />
+        <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
       </set>
     </attachedChunks>
   </component>
@@ -95,7 +202,8 @@
       <workItem from="1736590165213" duration="3460000" />
       <workItem from="1736701234961" duration="348000" />
       <workItem from="1748927058908" duration="1584000" />
-      <workItem from="1749495803618" duration="4718000" />
+      <workItem from="1749495803618" duration="18710000" />
+      <workItem from="1749816814476" duration="11333000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <option name="closed" value="true" />
@@ -113,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749495982408</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changes">
+      <option name="closed" value="true" />
+      <created>1749703025166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749703025166</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,9 +239,26 @@
     <MESSAGE value="Changes" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/全光谱+pca+特征选择+mlp预测.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/XRF$_1dcnn_attention.coverage" NAME="全光谱+1dcnn+attention预测 Coverage Results" MODIFIED="1736590576967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/XRF$_1dcnn_attentionwitho1.coverage" NAME="全光谱+1dcnn+attention预测witho1 Coverage Results" MODIFIED="1736702372717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/XRF$_1dcnn_attention.coverage" NAME="全光谱+1dcnn+attention预测 Coverage Results" MODIFIED="1736590576967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$visualization.coverage" NAME="visualization 覆盖结果" MODIFIED="1749840731875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$visualization_SpecSAFFNet.coverage" NAME="visualization_SpecSAFFNet 覆盖结果" MODIFIED="1749841554240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$Regression_Line.coverage" NAME="Regression Line 覆盖结果" MODIFIED="1749802421587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
     <SUITE FILE_PATH="coverage/XRF$main.coverage" NAME="main Coverage Results" MODIFIED="1736702122689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$Fitting_Curve.coverage" NAME="Fitting Curve 覆盖结果" MODIFIED="1749801453170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$_1dcnn_attention_.coverage" NAME="融合光谱+1dcnn+attention预测  覆盖结果" MODIFIED="1749839635990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$_1dcnn_attention.coverage" NAME="融合光谱+1dcnn+attention预测 覆盖结果" MODIFIED="1749841185718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
