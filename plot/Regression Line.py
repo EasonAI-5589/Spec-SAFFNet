@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # ——— 配置 ———
-element = 'Pb'  # 可改为 'Cu','Zn','Pb','V'
+element = 'V'  # 可改为 'Cu','Zn','Pb','V'
 
 # ——— 路径解析 ———
 script_dir   = os.path.dirname(os.path.abspath(__file__))
