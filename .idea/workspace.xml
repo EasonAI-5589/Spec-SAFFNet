@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81c77e5b-b516-47c2-9ded-a620d5764a36" name="Changes" comment="对比实验：全光谱+SVR">
-      <change afterPath="$PROJECT_DIR$/全光谱+PLS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/全光谱+RF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.11 神经网络+特征选择 Pb1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.16 1D CNN.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/previous/8.16 1D CNN.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.24 1D CNN + 参数选择.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.9 全光谱神经网络+PCA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/previous/8.9 全光谱神经网络+PCA.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +85,7 @@
       <recent name="C:\Users\86187\WPSDrive\1237965421\WPS云盘\XRF论文\XRF实验\XRF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/previous" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -109,7 +111,7 @@
       <workItem from="1748927058908" duration="1584000" />
       <workItem from="1749495803618" duration="18710000" />
       <workItem from="1749816814476" duration="11333000" />
-      <workItem from="1749841900615" duration="5171000" />
+      <workItem from="1749841900615" duration="5407000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <option name="closed" value="true" />
@@ -167,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749876770655</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="对比实验：全光谱+SVR">
+      <option name="closed" value="true" />
+      <created>1749879329997</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749879329997</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
