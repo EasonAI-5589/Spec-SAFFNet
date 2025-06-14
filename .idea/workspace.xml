@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81c77e5b-b516-47c2-9ded-a620d5764a36" name="Changes" comment="Changes">
+    <list default="true" id="81c77e5b-b516-47c2-9ded-a620d5764a36" name="Changes" comment="对比实验：全光谱+SVR">
+      <change afterPath="$PROJECT_DIR$/全光谱+PLS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/全光谱+RF.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_plot/fitting_curve_Cu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/output_plot/fitting_curve_Cu.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot/Regression Line.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot/Regression Line.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,33 +47,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.Fitting Curve.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Regression Line.executor&quot;: &quot;Run&quot;,
-    &quot;Python.visualization.executor&quot;: &quot;Run&quot;,
-    &quot;Python.visualization_SpecSAFFNet.executor&quot;: &quot;Run&quot;,
-    &quot;Python.全光谱+1dcnn+attention预测.executor&quot;: &quot;Run&quot;,
-    &quot;Python.全光谱+1dcnn+attention预测witho1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.融合光谱+1dcnn+attention预测 .executor&quot;: &quot;Run&quot;,
-    &quot;Python.融合光谱+1dcnn+attention预测.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/guoyichen/EasonAI/Spec-SAFFNet/Visualization&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Fitting Curve.executor": "Run",
+    "Python.Regression Line.executor": "Run",
+    "Python.visualization.executor": "Run",
+    "Python.visualization_SpecSAFFNet.executor": "Run",
+    "Python.全光谱+1dcnn+attention预测.executor": "Run",
+    "Python.全光谱+1dcnn+attention预测witho1.executor": "Run",
+    "Python.全光谱+PLS.executor": "Run",
+    "Python.全光谱+RF.executor": "Run",
+    "Python.全光谱+SVR.executor": "Run",
+    "Python.全光谱+mlp预测.executor": "Run",
+    "Python.融合光谱+1dcnn+attention预测 .executor": "Run",
+    "Python.融合光谱+1dcnn+attention预测.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/Users/guoyichen/EasonAI/Spec-SAFFNet/Visualization",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Visualization" />
@@ -105,7 +109,7 @@
       <workItem from="1748927058908" duration="1584000" />
       <workItem from="1749495803618" duration="18710000" />
       <workItem from="1749816814476" duration="11333000" />
-      <workItem from="1749841900615" duration="187000" />
+      <workItem from="1749841900615" duration="5171000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <option name="closed" value="true" />
@@ -139,7 +143,31 @@
       <option name="project" value="LOCAL" />
       <updated>1749841935797</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changes">
+      <option name="closed" value="true" />
+      <created>1749842105441</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749842105441</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes">
+      <option name="closed" value="true" />
+      <created>1749842195399</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749842195399</updated>
+    </task>
+    <task id="LOCAL-00007" summary="对比实验：全光谱+SVR">
+      <option name="closed" value="true" />
+      <created>1749876770655</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749876770655</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +175,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+    <MESSAGE value="对比实验：全光谱+SVR" />
+    <option name="LAST_COMMIT_MESSAGE" value="对比实验：全光谱+SVR" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -162,13 +191,17 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/XRF$_1dcnn_attentionwitho1.coverage" NAME="全光谱+1dcnn+attention预测witho1 Coverage Results" MODIFIED="1736702372717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$visualization_SpecSAFFNet.coverage" NAME="visualization_SpecSAFFNet 覆盖结果" MODIFIED="1749841554240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$Fitting_Curve.coverage" NAME="Fitting Curve 覆盖结果" MODIFIED="1749842046384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$_PLS.coverage" NAME="全光谱+PLS 覆盖结果" MODIFIED="1749877168673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$_SVR.coverage" NAME="全光谱+SVR 覆盖结果" MODIFIED="1749876686811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/XRF$_1dcnn_attention.coverage" NAME="全光谱+1dcnn+attention预测 Coverage Results" MODIFIED="1736590576967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Spec_SAFFNet$visualization.coverage" NAME="visualization 覆盖结果" MODIFIED="1749840731875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Spec_SAFFNet$visualization_SpecSAFFNet.coverage" NAME="visualization_SpecSAFFNet 覆盖结果" MODIFIED="1749841554240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Spec_SAFFNet$Regression_Line.coverage" NAME="Regression Line 覆盖结果" MODIFIED="1749842081260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$Regression_Line.coverage" NAME="Regression Line 覆盖结果" MODIFIED="1749842088086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$_mlp.coverage" NAME="全光谱+mlp预测 覆盖结果" MODIFIED="1749875690176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/XRF$main.coverage" NAME="main Coverage Results" MODIFIED="1736702122689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Spec_SAFFNet$Fitting_Curve.coverage" NAME="Fitting Curve 覆盖结果" MODIFIED="1749842046384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
-    <SUITE FILE_PATH="coverage/Spec_SAFFNet$_1dcnn_attention_.coverage" NAME="融合光谱+1dcnn+attention预测  覆盖结果" MODIFIED="1749839635990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$_RF.coverage" NAME="全光谱+RF 覆盖结果" MODIFIED="1749876860431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spec_SAFFNet$_1dcnn_attention_.coverage" NAME="融合光谱+1dcnn+attention预测  覆盖结果" MODIFIED="1749842130673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Spec_SAFFNet$_1dcnn_attention.coverage" NAME="融合光谱+1dcnn+attention预测 覆盖结果" MODIFIED="1749841185718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
